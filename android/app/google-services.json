@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "279639887928",
+    "project_id": "rentalhome-1111",
+    "storage_bucket": "rentalhome-1111.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279639887928:android:34d8217069d5aec06b96cd",
+        "android_client_info": {
+          "package_name": "com.example.rentalhome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "279639887928-0lgcnus3p7rintb723qk8n05929teqvm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rentalhome",
+            "certificate_hash": "8feed5e41a4a7d5777d0baa2ce709c4e89061887"
+          }
+        },
+        {
+          "client_id": "279639887928-meks1999i6biblnuirkrgs4hbs80pvtb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCERUZL_-8VSefhsB6p70IiKsdz4ZmUVyY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "279639887928-meks1999i6biblnuirkrgs4hbs80pvtb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
