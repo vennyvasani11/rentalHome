@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:awesome_notifications/awesome_notifications.dart';
+import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,6 +10,7 @@ import 'package:rentalhome/home.dart';
 import 'package:rentalhome/sqflite/sqflitetable.dart';
 import 'package:rentalhome/utility.dart';
 import '../main.dart';
+import 'package:path/path.dart';
 
 class Addhome extends StatefulWidget {
   const Addhome({super.key});
@@ -56,6 +60,9 @@ class _AddhomeState extends State<Addhome> {
   TextEditingController description = TextEditingController();
   @override
   void initState() {
+    firebase_storage.FirebaseStorage storage =
+        firebase_storage.FirebaseStorage.instance;
+
     super.initState();
     all.permission();
   }
@@ -67,6 +74,21 @@ class _AddhomeState extends State<Addhome> {
   String beds = listnumber.first;
   String bath = listnumber.first;
   String category = listcategory.first;
+
+  Future uploadFile() async {
+    if (imagefile1 == null) return;
+    final fileName = basename(imagefile1!.path);
+    final destination = 'files/$fileName';
+
+    try {
+      final ref = firebase_storage.FirebaseStorage.instance
+          .ref(destination)
+          .child('file/');
+      await ref.putFile(File(imagefile1?.path ?? ''));
+    } catch (e) {
+      print('error occured');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -111,6 +133,7 @@ class _AddhomeState extends State<Addhome> {
                             setState(() {
                               loadimage1 = 1;
                             });
+                            uploadFile();
                           }
                         },
                         child: loadimage1 == 0

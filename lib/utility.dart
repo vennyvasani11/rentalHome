@@ -120,9 +120,9 @@ class Utility {
     fontFamily: font.value,
     primarySwatch: generateMaterialColor(primary.blue.value),
     scaffoldBackgroundColor: Colors.black,
-    backgroundColor: Colors.black,
+    // backgroundColor: Colors.black,
     primaryColor: Colors.black,
-    toggleableActiveColor: Colors.blue,
+    // toggleableActiveColor: Colors.blue,
   );
 
   ThemeData lightTheme = ThemeData(
@@ -130,7 +130,7 @@ class Utility {
     fontFamily: font.value,
     primarySwatch: generateMaterialColor(primary.blue.value),
     brightness: Brightness.light,
-    backgroundColor: Colors.white,
+    // backgroundColor: Colors.white,
     primaryColor: Colors.white,
     //toggleableActiveColor: Colors.blue,
   );
