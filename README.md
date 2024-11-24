@@ -47,7 +47,7 @@ A few resources to get you started if this is your first Flutter project:
 ![25.jpg](snapshots%2F25.jpg)
 ![26.jpg](snapshots%2F26.jpg)
 ![27.jpg](snapshots%2F27.jpg)
-![28.png](snapshots%2F28.png)
+![28.jpg](snapshots%2F28.jpg)
 ![video_1.mp4](snapshots%2Fvideo_1.mp4)
 ![video_2.mp4](snapshots%2Fvideo_2.mp4)
 
